@@ -28,10 +28,10 @@
 <div class="container">
   <div class="jumbotron">
     <h1>Let's have Fun</h1>      
-    <button id="btn1" type="button" class="btn btn-default">#btn1</button>
-    <button id="btn2" type="button" class="btn btn-default">#btn2</button>
-    <button id="btn3" type="button" class="btn btn-default">#btn3</button>
-    <button id="btn4" type="button" class="btn btn-default">#btn4</button>
+    <button class="panel-button" data-panelid="panel1" type="button" class="btn btn-default">#btn1</button>
+    <button class="panel-button" data-panelid="panel2" type="button" class="btn btn-default">#btn2</button>
+    <button class="panel-button" data-panelid="panel3" type="button" class="btn btn-default">#btn3</button>
+    <button class="panel-button" data-panelid="panel4" type="button" class="btn btn-default">#btn4</button>
   </div>
     
     <div class="col-xs-3">
@@ -90,8 +90,47 @@
         // Shorthand notation
         $(function(){
             
-            $('#panel1').hide(1000).show(2000);    // Will hide panel1
+           /* $('#panel1').hide(1000).show(2000);    // Will hide panel1
             $('#panel2').slideUp(700).slideDown(800).fadeToggle(1000).fadeToggle(2000);
+        */
+            // When mouse is moved over a panel, fade out each panel
+/*            $('#btn1').on('mouseover', function() {
+                $('#panel1').fadeOut(600);
+            })
+            
+            $('#btn2').on('mouseover', function() {
+                $('#panel2').fadeOut(600);
+            })
+            
+            $('#btn3').on('mouseover', function() {
+                $('#panel3').fadeOut(600);
+            })
+            
+            $('#btn4').on('mouseover', function() {
+                $('#panel4').fadeOut(600);
+            })
+            
+            // On mouse click, bring back each panel
+            $('#btn1').on('click', function() {
+                $('#panel1').fadeIn(600);
+            })
+            
+            $('#btn2').on('click', function() {
+                $('#panel2').fadeIn(600);
+            })
+            
+            $('#btn3').on('click', function() {
+                $('#panel3').fadeIn(600);
+            })
+            
+            $('#btn4').on('click', function() {
+                $('#panel4').fadeIn(600);
+            })*/
+            
+            $('.panel-button').on('click', function() {
+                var panelId = $(this).attr('data-panelid');
+                $('#' + panelId).toggle();
+            })
         });
 
     </script>
