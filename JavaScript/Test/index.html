@@ -28,43 +28,45 @@
 <div class="container">
   <div class="jumbotron">
     <h1>Let's have Fun</h1>      
-    <button type="button" class="btn btn-default">#btn1</button>
-    <button type="button" class="btn btn-default">#btn2</button>
-    <button type="button" class="btn btn-default">#btn3</button>
-    <button type="button" class="btn btn-default">#btn4</button>
+    <button id="btn1" type="button" class="btn btn-default">#btn1</button>
+    <button id="btn2" type="button" class="btn btn-default">#btn2</button>
+    <button id="btn3" type="button" class="btn btn-default">#btn3</button>
+    <button id="btn4" type="button" class="btn btn-default">#btn4</button>
   </div>
-  <div class="col-xs-3">
-  <div id="panel-4" class="panel panel-primary">
-  <div class="panel-heading">
-   #panel1
-  </div>
-  <div class="panel-body"> Contet 
-  </div>
+    
+    <div class="col-xs-3">
+        <div id="panel1" class="panel panel-primary">
+            <div class="panel-heading">
+                #panel1
+            </div>
+        <div class="panel-body"> Contet 
+        </div>
+    </div>
+    </div>
+    
+    <div class="col-xs-3">
+        <div id="panel2" class="panel panel-primary">
+            <div class="panel-heading">
+                #panel2
+            </div>
+        <div class="panel-body"> Contet 
+        </div>
+        </div>
+    </div>
+    
+    <div class="col-xs-3">
+        <div id="panel3" class="panel panel-primary">
+            <div class="panel-heading">
+                #panel3
+            </div>
+            <div class="panel-body"> Content 
+            </div>
 
-  </div>
-  </div>
+        </div>
+    </div>
+    
   <div class="col-xs-3">
-  <div id="panel-4" class="panel panel-primary">
-  <div class="panel-heading">
-   #panel2
-  </div>
-  <div class="panel-body"> Contet 
-  </div>
-
-  </div>
-  </div>
-  <div class="col-xs-3">
-  <div id="panel-4" class="panel panel-primary">
-  <div class="panel-heading">
-   #panel3
-  </div>
-  <div class="panel-body"> Contet 
-  </div>
-
-  </div>
-  </div>
-  <div class="col-xs-3">
-  <div id="panel-4" class="panel panel-primary">
+  <div id="panel4" class="panel panel-primary">
   <div class="panel-heading">
    #panel4
   </div>
@@ -74,15 +76,23 @@
   </div>
   </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js">
+    <script>
 
-    $(document).ready(function(){
+    // Full signature
+/*    $(document).ready(function(){
 
       $("#panel1").hide(300);
 
-    });
+    });*/
+        
+        // Shorthand notation
+        $(function(){
+            
+            $('#panel1').hide(1000).show(2000);    // Will hide panel1
+            $('#panel2').slideUp(700).slideDown(800).fadeToggle(1000).fadeToggle(2000);
+        });
 
     </script>
   </body>
