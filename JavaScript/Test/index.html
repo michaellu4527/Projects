@@ -90,8 +90,44 @@
         // Shorthand notation
         $(function(){
             
-            $('#panel1').hide(1000).show(2000);    // Will hide panel1
+           /* $('#panel1').hide(1000).show(2000);    // Will hide panel1
             $('#panel2').slideUp(700).slideDown(800).fadeToggle(1000).fadeToggle(2000);
+        */
+            // When mouse is moved over a panel, fade out each panel
+            $('#btn1').on('mouseover', function() {
+                $('#panel1').fadeOut(600);
+            })
+            
+            $('#btn2').on('mouseover', function() {
+                $('#panel2').fadeOut(600);
+            })
+            
+            $('#btn3').on('mouseover', function() {
+                $('#panel3').fadeOut(600);
+            })
+            
+            $('#btn4').on('mouseover', function() {
+                $('#panel4').fadeOut(600);
+            })
+            
+            // On mouse click, bring back each panel
+            $('#btn1').on('click', function() {
+                $('#panel1').fadeIn(600);
+            })
+            
+            $('#btn2').on('click', function() {
+                $('#panel2').fadeIn(600);
+            })
+            
+            $('#btn3').on('click', function() {
+                $('#panel3').fadeIn(600);
+            })
+            
+            $('#btn4').on('click', function() {
+                $('#panel4').fadeIn(600);
+            })
+            
+            
         });
 
     </script>
