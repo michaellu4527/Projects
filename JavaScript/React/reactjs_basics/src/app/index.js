@@ -1,6 +1,9 @@
 import React from "react";
 import {render} from "react-dom";
 
+import React, { Home } from './components/Home';
+import React, { Header } from './components/Header';
+
 class App extends React.Component {
   render() {
     return (
