@@ -37,6 +37,6 @@ namespace ParkingLot
             parkingSpots.Add(s);
         }
 
-        public abstract Boolean canFitInSpot(ParkingSpot spot);
+        public abstract bool canFitInSpot(ParkingSpot spot);
     }
 }
