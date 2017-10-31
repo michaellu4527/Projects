@@ -9,6 +9,19 @@ namespace ParkingLot
 
     public abstract class Vehicle
     {
-        
+        protected List<ParkingSpot> parkingSpots = new List<ParkingSpot>();
+        protected String licensePlate;
+        protected int spotsNeeded;
+        protected int size;
+
+        protected int getSize() {
+            return size;
+        }
+
+        protected int getSpotsNeeded()
+        {
+            return spotsNeeded;
+        }
+
     }
 }
