@@ -15,7 +15,7 @@ namespace ParkingLot
 
         public override bool canFitInSpot(ParkingSpot spot)
         {
-         
+            // A bus will fit in any spot that is size 5 or larger
             if (getSize() >= 5)
             {
                 return true;

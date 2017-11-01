@@ -9,8 +9,9 @@ namespace ParkingLot
 
     public abstract class Vehicle
     {
-        protected List<ParkingSpot> parkingSpots = new List<ParkingSpot>();
+
         protected String licensePlate;
+        protected enum color { Red, Blue, Silver, Black };
         protected int spotsNeeded;
         protected int size;
 
@@ -29,12 +30,6 @@ namespace ParkingLot
         public void clearSpots()
         {
 
-        }
-
-        // Will "park" a vehicle into a particular parking spot.
-        public void parkInSpot(ParkingSpot s)
-        {
-            parkingSpots.Add(s);
         }
 
         public abstract bool canFitInSpot(ParkingSpot spot);

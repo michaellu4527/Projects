@@ -22,5 +22,10 @@ namespace ParkingLot
             return availableSpots;
         }
 
+        public void spotFreed()
+        {
+            availableSpots = availableSpots + 1;
+        }
+
     }
 }

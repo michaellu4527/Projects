@@ -7,9 +7,7 @@ namespace ParkingLot
 {
     public class ParkingSpot
     {
-        private Vehicle vehicle;
-        private VehicleSize spotSize;
-        private int row;
-        private int spotNumber;
+        private double id;
+        private enum size { ExtraLarge, Large, Medium, Small }
     }
 }
