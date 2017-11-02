@@ -5,10 +5,10 @@ using System.Web;
 
 namespace ParkingLot
 {
+    public enum VehicleSize { ExtraLarge, Large, Medium, Small };
 
     public abstract class Vehicle
     {
-        protected List<ParkingSpot> parkingSpots = new List<ParkingSpot>();
         protected String licensePlate;
         protected enum color { Red, Blue, Silver, Black };
         protected int spotsNeeded;
@@ -25,15 +25,20 @@ namespace ParkingLot
             return spotsNeeded;
         }
 
+        // Simulates parking a vehicle in a particular parking spot
         public void parkInSpot(ParkingSpot spot)
         {
             parkingSpots.Add(spot);
         }
 
-        // Will remove vehicle from spot
+        // Simulates removing a vehicle from a parking spot
         public void clearSpots()
         {
-
+            for (int i = 0; i < parkingSpots.Count; i++)
+            {
+                
+            }
+            parkingSpots.Clear();
         }
 
         public abstract bool canFitInSpot(ParkingSpot spot);

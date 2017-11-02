@@ -13,7 +13,7 @@ namespace ParkingLot
       
         }
 
-        public override Boolean canFitInSpot(ParkingSpot spot)
+        public override bool canFitInSpot(ParkingSpot spot)
         {
 
             if (getSize() > 0)

@@ -7,12 +7,31 @@ namespace ParkingLot
 {
     public class ParkingSpot
     {
+        private Vehicle vehicle;
         private double spotID;
-        private enum VehicleSize { ExtraLarge, Large, Medium, Small }
         private int spotSize;
         private int row;
         private Level level;
 
+        public ParkingSpot(Level lvl, int rw, int num, VehicleSize sz)
+        {
+            level = lvl;
+            row = rw;
+            spotID = num;
+            spotSize = (int)sz;           
+        }
+
+        public bool isAvailable()
+        {
+            if (this == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         // Will link ID number of parking spot to car
         public double getSpotID()
@@ -33,10 +52,14 @@ namespace ParkingLot
                 v.parkInSpot(this);
                 return true;
             }
+            else
+            {
+                return false;
+            }
         }
 
         // Removes vehicle from parking spot
-        public bool removeVehicle(Vehicle v)
+        public void removeVehicle() 
         {
 
         }

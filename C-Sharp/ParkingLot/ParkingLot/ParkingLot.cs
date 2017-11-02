@@ -7,7 +7,7 @@ namespace ParkingLot
 {
     public class ParkingLot
     {
-        private List<ParkingSpot> parkingSpots = new List<ParkingSpot>();
+        
         private int zipCode;
 
         public void placeVehicle(ParkingSpot spot)
