@@ -10,6 +10,8 @@ namespace ParkingLot
         private double spotID;
         private enum VehicleSize { ExtraLarge, Large, Medium, Small }
         private int spotSize;
+        private int row;
+        private Level level;
 
 
         // Will link ID number of parking spot to car
@@ -23,7 +25,18 @@ namespace ParkingLot
             return spotSize;
         }
 
-        public Vehicle findCar()
+        // Parks Vehicle
+        public bool parkVehicle(Vehicle v)
+        {
+            if (v.canFitInSpot(this))
+            {
+                v.parkInSpot(this);
+                return true;
+            }
+        }
+
+        // Removes vehicle from parking spot
+        public bool removeVehicle(Vehicle v)
         {
 
         }

@@ -5,11 +5,10 @@ using System.Web;
 
 namespace ParkingLot
 {
-    public enum VehicleSize { Motorcycle, Compact, Large }
 
     public abstract class Vehicle
     {
-
+        protected List<ParkingSpot> parkingSpots = new List<ParkingSpot>();
         protected String licensePlate;
         protected enum color { Red, Blue, Silver, Black };
         protected int spotsNeeded;
@@ -24,6 +23,11 @@ namespace ParkingLot
         protected int getSpotsNeeded()
         {
             return spotsNeeded;
+        }
+
+        public void parkInSpot(ParkingSpot spot)
+        {
+            parkingSpots.Add(spot);
         }
 
         // Will remove vehicle from spot
