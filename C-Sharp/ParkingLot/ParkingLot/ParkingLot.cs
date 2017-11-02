@@ -10,9 +10,17 @@ namespace ParkingLot
         private List<ParkingSpot> parkingSpots = new List<ParkingSpot>();
         private int zipCode;
 
-        ParkingSpot placeVehicle(Vehicle vehicle)
+        public void placeVehicle(ParkingSpot spot)
         {
+            parkingSpots.Add(spot);
+        }
 
+        public void clearSpot()
+        {
+            for (int i = 0; i < parkingSpots.Count(); i++)
+            {
+                // Call removeVehicle
+            }
         }
     }
 }
