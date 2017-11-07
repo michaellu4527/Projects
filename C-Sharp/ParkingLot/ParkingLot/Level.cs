@@ -43,9 +43,25 @@ namespace ParkingLot
             }
         }
 
+        // Simply returns the number of available spots.
         public int getAvailableSpots()
         {
             return availableSpots;
+        }
+
+        // Finds out whether or not a vehicle can be parked or not
+        public bool canParkVehicle(Vehicle vehicle)
+        {
+            if (getAvailableSpots() < vehicle.getSpotsNeeded())
+            {
+                return false;
+            }
+            int spotID = findAvailableSpots(vehicle);
+            if (spotID < 0)
+            {
+                return false;
+            }
+            return parkStartingAtSpot(spotID, vehicle);
         }
 
         public void spotFreed()

@@ -15,12 +15,12 @@ namespace ParkingLot
         protected int size;
 
         // Returns the size of the vehicle
-        protected int getSize() {
+        public int getSize() {
             return size;
         }
 
         // Will just retreive the number of spots needed to park vehicle.
-        protected int getSpotsNeeded()
+        public int getSpotsNeeded()
         {
             return spotsNeeded;
         }
