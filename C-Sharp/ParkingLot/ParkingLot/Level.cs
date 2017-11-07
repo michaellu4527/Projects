@@ -64,6 +64,19 @@ namespace ParkingLot
             return parkStartingAtSpot(spotID, vehicle);
         }
 
+        private bool parkStartingAtSpot(int spotID, Vehicle vehicle)
+        {
+            vehicle.clearSpots();
+            bool success = true;
+            // Parks a vehicle starting from the spot ID and stopping at vehicle.spotsNeeded
+            for (int i = spotID; i < spotID + vehicle.getSpotsNeeded(); i++)
+            {
+                success &= spots[i].parkVehicle(vehicle);
+            }
+            availableSpots -= vehicle.getSpotsNeeded(); // Reduce available spots
+            return success;
+        }
+
         public void spotFreed()
         {
             availableSpots = availableSpots + 1;
