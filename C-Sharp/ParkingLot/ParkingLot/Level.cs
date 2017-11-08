@@ -57,7 +57,7 @@ namespace ParkingLot
                 return false;
             }
             int spotID = findAvailableSpots(vehicle);
-            if (spotID < 0)
+            if (spotID < 0) // Cannot have a negative spot number
             {
                 return false;
             }
@@ -71,6 +71,7 @@ namespace ParkingLot
             // Parks a vehicle starting from the spot ID and stopping at vehicle.spotsNeeded
             for (int i = spotID; i < spotID + vehicle.getSpotsNeeded(); i++)
             {
+                // Returns true if vehicle was successfully parked.
                 success &= spots[i].parkVehicle(vehicle);
             }
             availableSpots -= vehicle.getSpotsNeeded(); // Reduce available spots
