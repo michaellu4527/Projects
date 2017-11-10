@@ -78,6 +78,23 @@ namespace ParkingLot
             return success;
         }
 
+        public int findAvailableSpots(Vehicle vehicle)
+        {
+            int spotsNeeded = vehicle.getSpotsNeeded();
+            int lastRow = -1;
+            int spotsFound = 0;
+            for (int i = 0; i < spots.Length; i++)
+            {
+                ParkingSpot spot = spots[i];
+                if (lastRow != spot.getRow())
+                {
+                    spotsFound = 0;
+                    lastRow = spot.getRow();
+                }
+                
+            }
+        }
+
         public void spotFreed()
         {
             availableSpots = availableSpots + 1;

@@ -44,6 +44,11 @@ namespace ParkingLot
             return spotSize;
         }
 
+        public int getRow()
+        {
+            return row;
+        }
+
         // Parks Vehicle
         public bool parkVehicle(Vehicle v)
         {

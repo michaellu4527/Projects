@@ -9,8 +9,7 @@ namespace ParkingLot
     {
         public Car()
         {
-            spotsNeeded = 1;
-      
+            spotsNeeded = 1;    
         }
 
         public override bool canFitInSpot(ParkingSpot spot)
