@@ -10,36 +10,45 @@
 
 <body>
     <form class="calcForm" name="calculator">
-        <input type="text" class="calcDisplay" id="display"></input>
         <div class="calcRow">
-            <button class="calcButton" value="7" onclick="numInput('7')"></button>
-            <button class="calcButton" value="8" onclick="numInput('8')"></button>
-            <button class="calcButton" value="9" onclick="numInput('9')"></button>
-            <button class="calcButton" value="/" onclick="setOperation('divide')"></button>
+            <input type="text" class="calcDisplay" id="display"></input>
         </div>
         <div class="calcRow">
-            <button class="calcButton" value="4" onclick="numInput('4')"></button>
-            <button class="calcButton" value="5" onclick="numInput('5')"></button>
-            <button class="calcButton" value="6" onclick="numInput('6')"></button>
-            <button class="calcButton" value="*" onclick="setOperation('multiply')"></button>
+            <button class="calcButton" value="clear" onclick="clearForm('clear')">Clear</button>
         </div>
         <div class="calcRow">
-            <button class="calcButton" value="1" onclick="numInput('1')"></button>
-            <button class="calcButton" value="2" onclick="numInput('2')"></button>
-            <button class="calcButton" value="3" onclick="numInput('3')"></button>
-            <button class="calcButton" value="-" onclick="setOperation('subtract')"></button>
+            <button class="calcButton" value="π" onclick="numInput('3.14256')">π</button>
+            <button class="calcButton" value="e" onclick="numInput('2.71')">e</button>
+            <button class="calcButton" value="Del" onclick="setOperation('del')">Del</button> <!--Might need to be changed-->
+            <button class="calcButton" value="/" onclick="setOperation('divide')">/</button>
+        </div>
+           
+        <div class="calcRow">
+            <button class="calcButton" value="7" onclick="numInput('7')">7</button>
+            <button class="calcButton" value="8" onclick="numInput('8')">8</button>
+            <button class="calcButton" value="9" onclick="numInput('9')">9</button>
+            <button class="calcButton" value="*" onclick="setOperation('multiply')">*</button>
         </div>
         <div class="calcRow">
-            <button class="calcButton" value="π" onclick="numInput('3.14256')"></button>
-            <button class="calcButton" value="x^2" onclick="numInput('8')"></button>
-            <button class="calcButton" value="." onclick="setDecimal('.')"></button>
-            <button class="calcButton" value="+" onclick="setOperation('add')"></button>
-            <input type="button" class="calcButton" value="4" onclick="numInput('4')" />
+            <button class="calcButton" value="4" onclick="numInput('4')">4</button>
+            <button class="calcButton" value="5" onclick="numInput('5')">5</button>
+            <button class="calcButton" value="6" onclick="numInput('6')">6</button>
+            <button class="calcButton" value="-" onclick="setOperation('subtract')">-</button>
+        </div>
+        <div class="calcRow">
+            <button class="calcButton" value="1" onclick="numInput('1')">1</button>
+            <button class="calcButton" value="2" onclick="numInput('2')">2</button>
+            <button class="calcButton" value="3" onclick="numInput('3')">3</button>
+            <button class="calcButton" value="+" onclick="setOperation('add')">+</button>
+        </div>
+        <div class="calcRow">
+            <button class="calcButton" value="0" onclick="numInput('0')">0</button>
+            <button class="calcButton" value="." onclick="setDecimal('.')">.</button>
+            <button class="calcButton" value="-" onclick="setNegative('-')">(-)</button>
+            <button class="calcButton" value="=" onclick="setEqual('equal')">=</button>
         </div>
     </form>
-  
 
-    <script src=""></script>
 </body>
 </html>
 
