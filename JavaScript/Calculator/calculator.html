@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Javascript Calculator</title>
+    <!-- External Scripts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!--Custom Scripts -->
     <link rel="stylesheet" href="calculator.css">
-    <script src="calculator.js"></script>
 </head>
 
 <body>
+    <h1 class="siteHeading">Javascript Calculator</h1>
     <form class="calcForm" name="calculator">
         <div class="calcDisplay">
             <input type="text" readonly size="16" id="display"></input>
@@ -19,10 +23,11 @@
         <div class="calcRow">
             <button class="calcButton" value="π" onclick="numInput('3.14256')">π</button>
             <button class="calcButton" value="e" onclick="numInput('2.71')">e</button>
-            <button class="calcButton" value="Del" onclick="setOperation('del')">Del</button> <!--Might need to be changed-->
+            <button class="calcButton" value="Del" onclick="setOperation('del')">Del</button>
+            <!--Might need to be changed-->
             <button class="calcButton" value="/" onclick="setOperation('divide')">/</button>
         </div>
-           
+
         <div class="calcRow">
             <button class="calcButton" value="7" onclick="numInput('7')">7</button>
             <button class="calcButton" value="8" onclick="numInput('8')">8</button>
@@ -45,10 +50,13 @@
             <button class="calcButton" value="0" onclick="numInput('0')">0</button>
             <button class="calcButton" value="." onclick="setDecimal('.')">.</button>
             <button class="calcButton" value="-" onclick="setNegative('-')">(-)</button>
-            <button class="calcButton" value="=" onclick="setEqual('equal')">=</button>
+            <button class="calcButton" value="=" onclick="equate('equal')">=</button>
         </div>
     </form>
 
-</body>
-</html>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="calculator.js"></script>
 
+</body>
+
+</html>
