@@ -1,0 +1,32 @@
+body {
+    background-color: tan;
+}
+.calcForm {
+    background-color: black;
+    height:300px;
+    width:264px;
+    border-radius:10px;
+    position:relative;
+    top:100px;
+    left:40%;
+} 
+
+.calcDisplay {
+    background-color:#000080;
+    width:224px;
+    position:relative;
+    left:20px;
+    top:20px;
+    height:45px;
+}
+
+.calcDisplay input {
+    position:relative;
+    top:2px;
+    left:2px;
+    height:35px;
+    color:black;
+    background-color:#bccd95;
+    font-size:21px;
+    text-align:right;
+} 
